@@ -1,0 +1,32 @@
+@import '@/styles/_styles.scss';
+
+.cardicon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__icon {
+    color: $colorVerde;
+    font-weight: bolder;
+    width: clamp(3.5rem, 3.383rem + 0.519vw, 4.5rem);
+    height: clamp(3.5rem, 3.383rem + 0.519vw, 4.5rem);
+  }
+  &__title {
+    color: $colorVerde;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: clamp(1.3rem, 1.271rem + 0.13vw, 1.55rem);
+  }
+  &__subtitle {
+    font-size: clamp(1.2rem, 1.177rem + 0.104vw, 1.4rem);
+  }
+  &__container {
+    display: flex;
+    gap: 1rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

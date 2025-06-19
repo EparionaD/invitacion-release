@@ -1,95 +1,92 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image from 'next/image';
+import styles from './page.module.scss';
+import { Button, CardIcon, Time } from '@/components';
+import { iconButton } from '@/data/button';
+import { Wedding, Cheers, Suit, Dress } from '@/components/Icons';
+import {
+  FlorAmarilla,
+  FlorAzul,
+  FlorRoja,
+  FlorYellow,
+} from '@/components/Flores';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <main className={styles.main}>
+      <section className={styles.intro}>
+        <FlorAmarilla className={styles.intro__amarilla} />
+        <FlorRoja className={styles.intro__roja} />
+        <FlorAmarilla className={styles.intro__azul} />
+        <h3 className={styles.intro__subtitle}>¡Nos casamos!</h3>
+        <div className={styles.intro__title}>
+          <h1>Tatiana</h1>
+          <h1 className={styles.intro__title__line}>&</h1>
+          <h1>Salvador</h1>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className={styles.intro__img}>
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src='https://cdn.pixabay.com/photo/2022/04/12/04/57/couple-7127168_960_720.jpg'
+            alt='Tatiana'
+            width={400}
+            height={600}
           />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src='https://cdn.pixabay.com/photo/2022/04/12/04/57/couple-7127168_960_720.jpg'
+            alt='Tatiana'
+            width={400}
+            height={600}
           />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            src='https://cdn.pixabay.com/photo/2022/04/12/04/57/couple-7127168_960_720.jpg'
+            alt='Tatiana'
+            width={400}
+            height={600}
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+        <p className={styles.intro__paragraph}>
+          Estamos súper emocionados de que puedas ser parte de la celebración de
+          nuestro matrimonio, por eso te invitamos a celebrar con nosotros este
+          día tan especial.
+        </p>
+      </section>
+      <section className={styles.date}>
+        <h3 className={styles.date__title}>SÁBADO</h3>
+        <div className={styles.container}>
+          <div className={styles.container__line}>AGOSTO</div>
+          <div className={styles.container__center}>02</div>
+          <div className={styles.container__line}>2025</div>
+        </div>
+        <Button data={iconButton.calendarData} />
+        <h3 className={styles.date__subtitle}>Faltan</h3>
+        <Time />
+      </section>
+      <section className={styles.address}>
+        <FlorAzul className={styles.address__azul} />
+        <FlorAzul className={styles.address__azulmirror} />
+        <FlorRoja className={styles.address__roja} />
+        <FlorRoja className={styles.address__rojamirror} />
+        <FlorYellow className={styles.address__yellow} />
+        <FlorYellow className={styles.address__yellowmirror} />
+        <h2 className={styles.address__title}>Sumacc Huayta</h2>
+        <p className={styles.address__subtitle}>Jr. Loreto 1655, Huancayo</p>
+        <Button data={iconButton.addressData} />
+        <div className={styles.address__card}>
+          <CardIcon
+            icon={Wedding}
+            title='ceremonia civil'
+            subtitle='10:30 am'
+          />
+          <CardIcon icon={Cheers} title='recepción' subtitle='01:00 pm' />
+          <CardIcon
+            icon={Suit}
+            icon1={Dress}
+            title='código de vestimenta'
+            subtitle='Elegante'
+            subtitle1='No usar vestidos blancos'
+            special={true}
+          />
+        </div>
+      </section>
+    </main>
   );
 }

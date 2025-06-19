@@ -1,0 +1,336 @@
+@import '@/styles/_styles.scss';
+
+.main {
+  padding: 0 1.5rem;
+  font-family: var(--font-libreCaslon);
+  overflow-x: hidden;
+}
+
+.intro {
+  font-family: var(--font-libreCaslon);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 8rem;
+  position: relative;
+  @include tablet {
+    margin-top: 12rem;
+  }
+  @include desktop-large {
+    margin-top: 18rem;
+  }
+  @include desktop-hd {
+    margin-top: 22rem;
+  }
+  @include desktop-4k {
+    margin-top: 28rem;
+  }
+  &__subtitle {
+    font-size: clamp(1.5rem, 1.43rem + 0.312vw, 2.1rem);
+    margin-bottom: 1.5rem;
+  }
+  &__title {
+    font-family: var(--font-styleScript);
+    font-weight: bolder;
+    font-size: clamp(3rem, 2.416rem + 2.597vw, 8rem);
+    color: $colorRojo;
+    line-height: 1.2;
+    &__line {
+      font-size: clamp(1.5rem, 1.438rem + 0.276vw, 2.1rem);
+    }
+  }
+  &__img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+  &__paragraph {
+    font-size: clamp(1.3rem, 1.259rem + 0.184vw, 1.7rem);
+  }
+  &__amarilla {
+    width: 70%;
+    transform: rotate(75deg);
+    top: -41%;
+    left: -46%;
+    @include tablet {
+      top: -52%;
+      left: -35%;
+      width: 50%;
+    }
+    @include desktop-large {
+      width: 40%;
+      top: -59%;
+      left: -27%;
+    }
+    @include desktop-hd {
+      width: 30%;
+      top: -61%;
+      left: -18%;
+    }
+    @include desktop-4k {
+      width: 25%;
+      top: -75%;
+      left: -14%;
+    }
+  }
+  &__roja {
+    width: 50%;
+    top: -39%;
+    left: 38%;
+    @include tablet {
+      width: 37%;
+      top: -50%;
+      left: 45%;
+    }
+    @include desktop-large {
+      width: 30%;
+      top: -55%;
+      left: 50%;
+    }
+    @include desktop-hd {
+      width: 25%;
+      top: -61%;
+      left: 45%;
+    }
+    @include desktop-4k {
+      width: 20%;
+      top: -75%;
+      left: 45%;
+    }
+  }
+  &__azul {
+    width: 70%;
+    top: -46%;
+    left: 79%;
+    @include tablet {
+      width: 50%;
+      top: -57%;
+      left: 83%;
+    }
+    @include desktop-large {
+      width: 40%;
+      top: -63%;
+      left: 85%;
+    }
+    @include desktop-hd {
+      width: 30%;
+      top: -67%;
+      left: 89%;
+    }
+    @include desktop-4k {
+      width: 25%;
+      top: -82%;
+      left: 91%;
+    }
+  }
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+  gap: 0.7rem;
+  font-family: var(--font-libreCaslon);
+  @include tablet {
+    padding: 5rem 0;
+  }
+  @include desktop-large {
+    padding: 7rem 0;
+  }
+  &__title {
+    text-align: center;
+    font-weight: bolder;
+    font-size: clamp(1.3rem, 1.259rem + 0.184vw, 1.7rem);
+  }
+  &__subtitle {
+    text-align: center;
+    font-size: clamp(1.3rem, 1.259rem + 0.184vw, 1.7rem);
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1.2fr;
+  gap: 0.3rem;
+
+  &__line {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 0.5rem 0;
+    font-weight: bolder;
+    border-top: 1px solid $colorNegro;
+    border-bottom: 1px solid $colorNegro;
+    font-size: clamp(1.3rem, 1.259rem + 0.184vw, 1.7rem);
+  }
+  &__center {
+    text-align: center;
+    font-weight: bolder;
+    font-size: clamp(2.5rem, 2.448rem + 0.23vw, 3rem);
+  }
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &__title {
+    font-weight: bolder;
+    font-size: clamp(2.3rem, 2.218rem + 0.364vw, 3rem);
+    text-align: center;
+  }
+  &__subtitle {
+    text-align: center;
+    font-size: clamp(1.4rem, 1.359rem + 0.184vw, 1.8rem);
+    margin-bottom: 1.5rem;
+  }
+  &__card {
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    @include tablet {
+      padding: 4.5rem 0;
+    }
+    @include desktop-large {
+      padding: 6.5rem 0;
+    }
+    @include desktop-hd {
+      padding: 9.5rem 0;
+    }
+    @include desktop-4k {
+      padding: 13.5rem 0;
+    }
+  }
+  &__azul,
+  &__azulmirror {
+    width: 40%;
+    @include tablet {
+      width: 30%;
+    }
+    @include desktop-large {
+      width: 25%;
+    }
+  }
+  &__azul {
+    transform: rotate(-90deg);
+    left: 81%;
+    top: 1%;
+    @include tablet {
+      left: 83%;
+    }
+    @include desktop-large {
+      left: 85%;
+    }
+  }
+  &__azulmirror {
+    left: -21%;
+    top: 1%;
+    transform: rotate(-90deg) scaleY(-1);
+    @include tablet {
+      left: -13%;
+    }
+    @include desktop-large {
+      left: -10%;
+    }
+  }
+  &__roja,
+  &__rojamirror {
+    width: 60%;
+    top: 35%;
+    @include tablet {
+      width: 35%;
+      top: 32%;
+    }
+    @include desktop-large {
+      width: 25%;
+    }
+    @include desktop-hd {
+      width: 20%;
+    }
+    @include desktop-4k {
+      width: 15%;
+    }
+  }
+  &__roja {
+    left: 87%;
+    @include tablet {
+      left: 91%;
+    }
+    @include desktop-large {
+      left: 93%;
+    }
+    @include desktop-hd {
+      left: 94%;
+    }
+    @include desktop-4k {
+      left: 95%;
+    }
+  }
+  &__rojamirror {
+    left: -46%;
+    transform: scaleX(-1);
+    @include tablet {
+      left: -26%;
+    }
+    @include desktop-large {
+      left: -18%;
+    }
+    @include desktop-hd {
+      left: -14%;
+    }
+    @include desktop-4k {
+      left: -10%;
+    }
+  }
+  &__yellow,
+  &__yellowmirror {
+    width: 40%;
+    top: 70%;
+    @include tablet {
+      width: 25%;
+      top: 68%;
+    }
+    @include desktop-large {
+      width: 15%;
+      top: 70%;
+    }
+    @include desktop-hd {
+      width: 10%;
+    }
+  }
+  &__yellow {
+    left: -27%;
+    @include tablet {
+      left: -16%;
+    }
+    @include desktop-large {
+      left: -9%;
+    }
+    @include desktop-hd {
+      left: -6%;
+    }
+    @include desktop-4k {
+      left: -5%;
+    }
+  }
+  &__yellowmirror {
+    left: 87%;
+    transform: scaleX(-1);
+    @include tablet {
+      left: 91%;
+    }
+    @include desktop-large {
+      left: 94%;
+    }
+    @include desktop-hd {
+      left: 96%;
+    }
+    @include desktop-4k {
+      left: 95%;
+    }
+  }
+}

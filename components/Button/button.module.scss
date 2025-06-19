@@ -1,0 +1,25 @@
+@import '@/styles/_styles.scss';
+
+.button {
+  display: flex;
+  background-color: $colorRojo;
+  border-radius: 0.2rem;
+  padding: 0.3rem 0.5rem;
+  width: fit-content;
+  color: $colorBlanco;
+  justify-content: center;
+  align-self: center;
+  gap: 0.6rem;
+  font-size: clamp(1.3rem, 1.259rem + 0.184vw, 1.7rem);
+  font-family: var(--font-afacad);
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: $colorRojoOscuro;
+  }
+  &__icon {
+    align-self: center;
+  }
+  &__title {
+    align-self: center;
+  }
+}
