@@ -9,7 +9,7 @@ interface ButtonProps {
 
 const Button = ({ data }: ButtonProps) => {
   return (
-    <Link href={data.url} className={styles.button}>
+    <Link href={data.url} className={styles.button} target='_blank'>
       <div className={styles.button__icon}>{data.icon}</div>
       <span className={styles.button__title}>{data.title}</span>
     </Link>

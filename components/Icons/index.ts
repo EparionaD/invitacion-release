@@ -5,3 +5,6 @@ export * from './Cheers';
 export * from './Suit';
 export * from './Dress';
 export * from './Gif';
+export * from './CalendarTwo';
+export * from './Mail';
+export * from './Whatsapp';

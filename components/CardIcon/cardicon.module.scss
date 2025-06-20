@@ -18,7 +18,8 @@
     font-size: clamp(1.3rem, 1.271rem + 0.13vw, 1.55rem);
   }
   &__subtitle {
-    font-size: clamp(1.2rem, 1.177rem + 0.104vw, 1.4rem);
+    font-size: clamp(1.1rem, 1.077rem + 0.104vw, 1.3rem);
+    text-align: center;
   }
   &__container {
     display: flex;

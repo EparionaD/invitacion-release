@@ -2,7 +2,15 @@ import Image from 'next/image';
 import styles from './page.module.scss';
 import { Button, CardIcon, Time } from '@/components';
 import { iconButton } from '@/data/button';
-import { Wedding, Cheers, Suit, Dress, Gif } from '@/components/Icons';
+import {
+  Wedding,
+  Cheers,
+  Suit,
+  Dress,
+  Gif,
+  CalendarTwo,
+  Whatsapp,
+} from '@/components/Icons';
 import {
   FlorAmarilla,
   FlorAzul,
@@ -23,24 +31,27 @@ export default function Home() {
           <h1 className={styles.intro__title__line}>&</h1>
           <h1>Salvador</h1>
         </div>
-        <div className={styles.intro__img}>
+        <div className={styles.intro__container}>
           <Image
-            src='https://cdn.pixabay.com/photo/2022/04/12/04/57/couple-7127168_960_720.jpg'
-            alt='Tatiana'
-            width={400}
-            height={600}
+            src='https://res.cloudinary.com/eparionad/image/upload/v1750450244/salvador/invitacion/Preboda_Tatiana_y_Salvador-191_pypa4j.jpg'
+            alt='Salvador y Tatiana'
+            width={4953}
+            height={7429}
+            className={styles.intro__img}
           />
           <Image
-            src='https://cdn.pixabay.com/photo/2022/04/12/04/57/couple-7127168_960_720.jpg'
-            alt='Tatiana'
-            width={400}
-            height={600}
+            src='https://res.cloudinary.com/eparionad/image/upload/v1750450244/salvador/invitacion/Preboda_Tatiana_y_Salvador-47_isjapk.jpg'
+            alt='Salvador y Tatiana'
+            width={5139}
+            height={7709}
+            className={styles.intro__img}
           />
           <Image
-            src='https://cdn.pixabay.com/photo/2022/04/12/04/57/couple-7127168_960_720.jpg'
-            alt='Tatiana'
-            width={400}
-            height={600}
+            src='https://res.cloudinary.com/eparionad/image/upload/v1750450680/salvador/invitacion/Preboda_Tatiana_y_Salvador-21_m0dmw4.jpg'
+            alt='Salvador y Tatiana'
+            width={4433}
+            height={5069}
+            className={styles.intro__img}
           />
         </div>
         <p className={styles.intro__paragraph}>
@@ -141,6 +152,41 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+      <section className={styles.assistance}>
+        <FlorRoja className={styles.assistance__roja} />
+        <FlorRoja className={styles.assistance__rojamirror} />
+        <FlorYellow className={styles.assistance__yellow} />
+        <FlorYellow className={styles.assistance__yellowmirror} />
+        <div className={styles.assistance__container}>
+          <CardIcon
+            icon={CalendarTwo}
+            title='confirma tus asistencia'
+            subtitle='Tu presencia es importante para nosotros. Confirma tu asistencia antes del 15 de junio.'
+          />
+          <Button data={iconButton.assistanceData} />
+        </div>
+        <div className={styles.assistance__container}>
+          <CardIcon
+            icon={Whatsapp}
+            title='contacto'
+            subtitle='Para cualquier consulta nos puedes escribir directamente.'
+          />
+          <Button data={iconButton.whatsappData} />
+        </div>
+      </section>
+      <section className={styles.conclusion}>
+        <Image
+          src='https://res.cloudinary.com/eparionad/image/upload/v1750450245/salvador/invitacion/Preboda_Tatiana_y_Salvador-192_yuwnnd.jpg'
+          width={7626}
+          height={5084}
+          alt='Salvador y Tatiana'
+        />
+        <div className={styles.conclusion__container}>
+          <h3 className={styles.conclusion__text}>¡Te esperamos!</h3>
+          <h2 className={styles.conclusion__title}>Tatiana & Salvador</h2>
+        </div>
+        <FlorAmarilla className={styles.conclusion__amarilla} />
       </section>
     </main>
   );
