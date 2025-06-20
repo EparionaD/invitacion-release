@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './page.module.scss';
 import { Button, CardIcon, Time } from '@/components';
 import { iconButton } from '@/data/button';
-import { Wedding, Cheers, Suit, Dress } from '@/components/Icons';
+import { Wedding, Cheers, Suit, Dress, Gif } from '@/components/Icons';
 import {
   FlorAmarilla,
   FlorAzul,
@@ -85,6 +85,61 @@ export default function Home() {
             subtitle1='No usar vestidos blancos'
             special={true}
           />
+        </div>
+      </section>
+      <section className={styles.gif}>
+        <div className={styles.gif__container}>
+          <Gif className={styles.gif__icon} />
+          <h3 className={styles.gif__title}>mesa de regalos</h3>
+        </div>
+        <p className={styles.gif__subtitle}>
+          Si deseas hacernos un regalo, te agradeceríamos enormemente que lo
+          envíes a la siguiente dirección debido a que vivimos en Lima:
+        </p>
+        <p className={styles.gif__subtitle__address}>
+          Residencial Villa Los Molles Torre 2 dpto. 806 - Calle 2 Nro. 131 -
+          Comas
+        </p>
+        <p className={styles.gif__subtitle}>
+          O si prefieres, también puedes hacer un aporte económico:{' '}
+        </p>
+        <div className={styles.gif__tables}>
+          <div className={styles.table}>
+            <Image
+              className={styles.table__img}
+              src='/img/bcp.png'
+              width={46}
+              height={46}
+              alt='bcp'
+            />
+            <div className={styles.table__text}>962 338 129</div>
+          </div>
+          <div className={styles.table}>
+            <Image
+              className={styles.table__img}
+              src='/img/interbank.png'
+              width={46}
+              height={46}
+              alt='interbank'
+            />
+            <div className={styles.table__text__v2}>
+              <p>Cuenta soles: 898-3400249310</p>
+              <p>CCI: 003-898-013400249310-41</p>
+            </div>
+          </div>
+          <div className={styles.table}>
+            <Image
+              className={styles.table__img}
+              src='/img/bbva.png'
+              width={46}
+              height={46}
+              alt='bbva'
+            />
+            <div className={styles.table__text__v2}>
+              <p>Cuenta dólares: 0011-0814-0256014721</p>
+              <p>CCI: 011-814-000256014721-13</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

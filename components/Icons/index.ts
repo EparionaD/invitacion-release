@@ -4,3 +4,4 @@ export * from './Wedding';
 export * from './Cheers';
 export * from './Suit';
 export * from './Dress';
+export * from './Gif';
