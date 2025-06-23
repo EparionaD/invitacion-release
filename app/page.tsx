@@ -162,7 +162,7 @@ export default function Home() {
           <CardIcon
             icon={CalendarTwo}
             title='confirma tus asistencia'
-            subtitle='Tu presencia es importante para nosotros. Confirma tu asistencia antes del 25 de junio.'
+            subtitle='Tu presencia es importante para nosotros. Confirma tu asistencia antes del 27 de junio.'
           />
           <Button data={iconButton.assistanceData} />
         </div>
