@@ -161,7 +161,7 @@ export default function Home() {
         <div className={styles.assistance__container}>
           <CardIcon
             icon={CalendarTwo}
-            title='confirma tus asistencia'
+            title='confirma tu asistencia'
             subtitle='Tu presencia es importante para nosotros. Confirma tu asistencia antes del 27 de junio.'
           />
           <Button data={iconButton.assistanceData} />
